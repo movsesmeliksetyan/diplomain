@@ -1,0 +1,32 @@
+import React from 'react';
+import { Row, Col, Typography } from 'antd';
+import Card from '../components/Card';
+import image1 from '../static/img/152960.svg';
+import image2 from '../static/img/295648.svg';
+import image3 from '../static/img/841606.svg';
+
+const { Title } = Typography;
+
+const HomePage = () => (
+  <>
+    <Title className='main-title'>Ավարտական աշխատանք</Title>
+
+    <Row gutter={16}>
+      <Col span={8}>
+        <Card
+          title='Ֆինանսական ցուցանիշների հաշվարկ'
+          image={image1} />
+      </Col>
+      <Col span={8}>
+        <Card
+          title='Ֆին. կայունության ցուցանիշների հաշվարկ'
+          image={image2} />
+      </Col>
+      <Col span={8}>
+        <Card title='Գրաֆիկական վերլուծություն' image={image3} />
+      </Col>
+    </Row>
+  </>
+);
+
+export default HomePage;
