@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Typography } from 'antd';
+import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import image1 from '../static/img/152960.svg';
 import image2 from '../static/img/295648.svg';
@@ -14,7 +15,7 @@ const HomePage = () => (
     <Row gutter={16}>
       <Col span={8}>
         <Card
-          title='Ֆինանսական ցուցանիշների հաշվարկ'
+          title={<Link to='/indicators'>Ֆինանսական ցուցանիշների հաշվարկ</Link>}
           image={image1} />
       </Col>
       <Col span={8}>

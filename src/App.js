@@ -3,10 +3,11 @@ import 'antd/dist/antd.css';
 import './static/css/main.css';
 import { Layout } from 'antd';
 import {
-  Switch,
+  Routes,
   Route,
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import IndicatorsPage from './pages/IndicatorsPage';
 import Header from './components/Header';
 
 const { Content, Footer } = Layout;
@@ -18,9 +19,10 @@ function App() {
 
       <Content style={{ padding: '0 50px' }}>
         <div className='site-layout-content content'>
-          <Switch>
-            <Route exact path='/' component={HomePage} />
-          </Switch>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/indicators' element={<IndicatorsPage />} />
+          </Routes>
         </div>
       </Content>
       <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
