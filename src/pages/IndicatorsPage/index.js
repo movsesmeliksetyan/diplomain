@@ -18,6 +18,12 @@ const IndicatorsPage = () => {
   const [timer, setTimer] = useState(0);
   const [solvency, setSolvency] = useState(0);
 
+  const [debtLoadRatio, setDebtLoadRatio] = useState(0);
+  const [debtEquity, setDebtEquity] = useState(0);
+  const [debtAgainstObligation, setDebtAgainstObligation] = useState(0);
+  const [percentageCoverageRatio, setPercentageCoverageRatio] = useState(0);
+  const [financialSeriousness, setFinancialSeriousness] = useState(0);
+
   const onFinish = (values) => {
     setCleanWorkingCapital((values.currentAssets - values.totalAssets) / values.shortTermLiabilities);
     setCurrentLiquidityRatio(values.currentAssets / values.totalAssets);
@@ -29,6 +35,13 @@ const IndicatorsPage = () => {
       (values.financialMeans + values.marketSecurities) / ((values.costOfSoldProducts + values.otherExpenses) / 365),
     );
     setSolvency((values.currentAssets + values.financialMeans) / values.shortTermLiabilities);
+
+    setDebtLoadRatio((values.longTermDebt + values.leasingValue) / (values.longTermDebt + values.equity + values.leasingValue));
+    setDebtEquity((values.longTermDebt + values.leasingValue) / values.equity);
+    setDebtAgainstObligation((values.commonResponsibilities - values.equity) / values.commonResponsibilities);
+    setPercentageCoverageRatio((values.incomeBeforeTaxes - values.depreciation) / values.percentage);
+
+    setFinancialSeriousness(values.shortTermLiabilities / values.equity);
   };
 
   return (<>
@@ -50,8 +63,15 @@ const IndicatorsPage = () => {
             absoluteLiquidityRatio={absoluteLiquidityRatio}
             timer={timer}
             solvency={solvency}
-             />
-          <FinancialDependencyRatios />
+          />
+
+          <FinancialDependencyRatios
+            debtLoadRatio={debtLoadRatio}
+            debtEquity={debtEquity}
+            debtAgainstObligation={debtAgainstObligation}
+            percentageCoverageRatio={percentageCoverageRatio}
+            financialSeriousness={financialSeriousness}
+          />
         </Space>
       </Col>
     </Row>
