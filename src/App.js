@@ -9,6 +9,7 @@ import {
 import HomePage from './pages/HomePage';
 import IndicatorsPage from './pages/IndicatorsPage';
 import Header from './components/Header';
+import Help from './pages/Help';
 
 const { Content, Footer } = Layout;
 
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/indicators' element={<IndicatorsPage />} />
+            <Route path='/help' element={<Help />} />
           </Routes>
         </div>
       </Content>

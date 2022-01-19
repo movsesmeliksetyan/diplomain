@@ -78,8 +78,8 @@ const IndicatorsPageForm = ({ onFinish, form }) => (<>
       <Input />
     </Form.Item>
 
-    <Button htmlType='submit'>
-      Submit
+    <Button type='primary' htmlType='submit'>
+      Հաշվել
     </Button>
   </Form>
 </>);
