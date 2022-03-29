@@ -16,7 +16,7 @@ const Asd = () => (
       <Link to='/indicators'>Ֆինանսական ցուցանիշների հաշվարկ</Link>
     </Menu.Item>
     <Menu.Item key='app'>
-      Ֆին. կայունության ցուցանիշների հաշվարկ
+      <Link to='/stability'>Ֆին. կայունության ցուցանիշների հաշվարկ</Link>
     </Menu.Item>
     <Menu.Item key='alipay'>
       <Link to='/help'>Օգնություն</Link>

@@ -20,7 +20,7 @@ const HomePage = () => (
       </Col>
       <Col span={8}>
         <Card
-          title='Ֆին. կայունության ցուցանիշների հաշվարկ'
+          title={<Link to='/stability'>Ֆին. կայունության ցուցանիշների հաշվարկ</Link>}
           image={image2} />
       </Col>
       <Col span={8}>

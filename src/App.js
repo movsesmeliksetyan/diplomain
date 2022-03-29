@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import IndicatorsPage from './pages/IndicatorsPage';
+import FinancialStability from './pages/FinancialStability';
 import Header from './components/Header';
 import Help from './pages/Help';
 
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/indicators' element={<IndicatorsPage />} />
+            <Route path='/stability' element={<FinancialStability />} />
             <Route path='/help' element={<Help />} />
           </Routes>
         </div>

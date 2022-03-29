@@ -18,7 +18,7 @@ const LiquidityRatios = ({
   <Title level={3}>Իրացվելիության գործակիցներ</Title>
 
   <Space direction='vertical'>
-    <Text display='block'>Մաքուր շրջանառու կապիտա: {cleanWorkingCapital}</Text>
+    <Text display='block'>Մաքուր շրջանառու կապիտալ: {cleanWorkingCapital}</Text>
     <Text>Ընթացիկ իրացվելիության գործակից: {currentLiquidityRatio}</Text>
     <Text>Ժամկետային իրացվելիության գործակից: {termLiquidityRatio}</Text>
     <Text>Բացարձակ իրացվելիության գործակից: {absoluteLiquidityRatio}</Text>
